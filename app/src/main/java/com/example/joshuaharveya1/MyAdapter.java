@@ -13,11 +13,13 @@ import android.widget.TextView;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
 
     Context c;
-    String[] spacecrafts;
+    String[] headlines;
+    String[] descriptions;
 
-    public MyAdapter(Context c, String[] spacecrafts) {
+    public MyAdapter(Context c, String[] headlines, String[] descriptions) {
         this.c = c;
-        this.spacecrafts = spacecrafts;
+        this.headlines = headlines;
+        this.descriptions = descriptions;
     }
 
     @Override
@@ -28,12 +30,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
 
     @Override
     public void onBindViewHolder(RecyclerVH holder, int position) {
-        holder.nameTxt.setText(spacecrafts[position]);
+        holder.headline.setText(headlines[position]);
+        holder.description.setText(descriptions[position]);
     }
 
     @Override
     public int getItemCount() {
-        return spacecrafts.length;
+        return headlines.length;
     }
 
     /*
@@ -41,12 +44,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
      */
     public class RecyclerVH extends RecyclerView.ViewHolder
     {
-        TextView nameTxt;
+        TextView headline;
+        TextView description;
 
         public RecyclerVH(View itemView) {
             super(itemView);
 
-            nameTxt= (TextView) itemView.findViewById(R.id.nameTxt);
+            headline= (TextView) itemView.findViewById(R.id.headline);
+            description= (TextView) itemView.findViewById(R.id.description);
         }
     }
 }

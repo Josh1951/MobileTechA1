@@ -14,6 +14,7 @@ public class NewsFragment extends Fragment {
 
     private RecyclerView rv;
     private static String[] headlines={"Headline 1","Headline 2","Headline 3","Headline 4","Headline 5"};
+    private static String[] descriptions={"Headline x","xxxxxx","Hblurgh","something","something"};
 
     public static NewsFragment newInstance()
     {
@@ -32,13 +33,9 @@ public class NewsFragment extends Fragment {
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //ADAPTER
-        rv.setAdapter(new MyAdapter(getActivity(),headlines));
+        rv.setAdapter(new MyAdapter(getActivity(),headlines, descriptions));
 
         return rootView;
     }
 
-    @Override
-    public String toString() {
-        return "InterGalactic";
-    }
 }
