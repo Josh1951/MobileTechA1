@@ -7,9 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by Oclemy on 9/24/2016 for ProgrammingWizards Channel and http://www.camposha.com.
- */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
 
     Context c;
@@ -50,8 +47,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
         public RecyclerVH(View itemView) {
             super(itemView);
 
-            headline= (TextView) itemView.findViewById(R.id.headline);
-            description= (TextView) itemView.findViewById(R.id.description);
+            headline = (TextView) itemView.findViewById(R.id.headline);
+            description = (TextView) itemView.findViewById(R.id.description);
         }
     }
 }
