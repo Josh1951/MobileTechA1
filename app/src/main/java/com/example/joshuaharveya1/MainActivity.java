@@ -32,8 +32,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new LandingFragment()).commit();
+        //Load landing fragment
+        if(savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new LandingFragment()).commit();
+        }
     }
 
     //Handle naviagtion button presses
