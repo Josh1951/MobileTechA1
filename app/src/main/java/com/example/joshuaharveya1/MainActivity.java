@@ -1,5 +1,6 @@
 package com.example.joshuaharveya1;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -70,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_contact:
-                Toast.makeText(this, "Contact", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, Contact.class));
+                //Toast.makeText(this, "Contact", Toast.LENGTH_SHORT).show();
                 break;
         }
 
