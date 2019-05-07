@@ -10,10 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import fragments.EventsFragment;
+import fragments.GroupsFragment;
+import fragments.LandingFragment;
+import fragments.NewsFragment;
+import fragments.OffersFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
@@ -71,8 +76,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_contact:
-                startActivity(new Intent(MainActivity.this, Contact.class));
-                //Toast.makeText(this, "Contact", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, ContactActivity.class));
+                //Toast.makeText(this, "ContactActivity", Toast.LENGTH_SHORT).show();
                 break;
         }
 
