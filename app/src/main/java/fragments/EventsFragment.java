@@ -19,6 +19,7 @@ public class EventsFragment extends Fragment {
     private static String lipsum = "Hat Trick Hero... George Boyd for Peterborough United against Accrington Stanley on the 15th January 2008. Michael Owen for England against Germany on the 1st September 2001. ";
     private static String[] headlines={"Event 1","Event 2","Event 3","Event 4","Event 5"};
     private static String[] descriptions={lipsum, lipsum, lipsum, lipsum, lipsum};
+    private static int image = R.drawable.ic_events;
 
     public static EventsFragment newInstance()
     {
@@ -37,7 +38,7 @@ public class EventsFragment extends Fragment {
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //ADAPTER
-        rv.setAdapter(new MyAdapter(getActivity(),headlines, descriptions));
+        rv.setAdapter(new MyAdapter(getActivity(),headlines, descriptions, image));
 
         return rootView;
     }
