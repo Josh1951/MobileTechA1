@@ -40,7 +40,7 @@ public class ContactActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL, "test@test.com");
+                intent.putExtra(Intent.EXTRA_EMAIL, contactEmail);
                 intent.putExtra(Intent.EXTRA_SUBJECT, contactName);
                 intent.putExtra(Intent.EXTRA_TEXT, contactMessage);
 
