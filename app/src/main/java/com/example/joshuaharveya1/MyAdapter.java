@@ -32,7 +32,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return headlines.length;
     }
 
@@ -45,6 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.RecyclerVH> {
         TextView description;
 
         public RecyclerVH(View itemView) {
+
             super(itemView);
 
             headline = (TextView) itemView.findViewById(R.id.headline);
