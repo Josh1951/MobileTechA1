@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import fragments.EventsFragment;
 import fragments.GroupsFragment;
+import fragments.JobsFragment;
 import fragments.LandingFragment;
 import fragments.NewsFragment;
 import fragments.OffersFragment;
@@ -71,9 +72,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_groups:
                 getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right).replace(R.id.fragment_container,
                         new GroupsFragment()).commit();
+            case R.id.nav_jobs:
+                getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_right).replace(R.id.fragment_container,
+                        new JobsFragment()).commit();
                 break;
             case R.id.nav_share:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Share function coming soon", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_contact:
                 startActivity(new Intent(MainActivity.this, ContactActivity.class));
