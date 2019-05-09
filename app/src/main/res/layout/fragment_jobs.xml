@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_light">
+    android:background="@android:color/holo_red_light">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/offers_RV"
+        android:id="@+id/jobs_RV"
         android:layout_width="match_parent"
         android:layout_height="462dp"
         android:layout_marginStart="8dp"
@@ -19,18 +19,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/offers_h1"
+        app:layout_constraintTop_toBottomOf="@+id/news_h1"
         app:layout_constraintVertical_bias="0.38" />
 
     <TextView
-        android:id="@+id/offers_h1"
+        android:id="@+id/news_h1"
         android:layout_width="263dp"
         android:layout_height="73dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Great student discounts!"
+        android:text="BSU News"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
